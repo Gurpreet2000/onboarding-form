@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import OnboardingForm from './components/OnboardingForm';
 
 const App = () => {
-	return <div id="app">App</div>;
+	return <OnboardingForm />;
 };
 
 export default App;

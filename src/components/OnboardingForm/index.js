@@ -1,7 +1,3 @@
-import React from 'react';
-
-const OnboardingForm = () => {
-	return <div>OnboardingForm</div>;
-};
+import OnboardingForm from './OnboardingForm';
 
 export default OnboardingForm;
