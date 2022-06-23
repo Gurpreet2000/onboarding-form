@@ -1,9 +1,127 @@
+:root {
+	--color-primary: #664de5;
+	--color-background: white;
+	--color-border: rgb(225, 225, 225);
+	--color-text: black;
+	--color-light-text: grey;
+	--color-label: rgb(50, 50, 50);
+}
+
 button {
-	background-color: #664de5;
-	color: white;
+	background-color: var(--color-primary);
+	color: var(--color-background);
 	border: 0px;
 	border-radius: 0.25rem;
 	outline: none;
 	padding: 1rem;
 	margin: 1rem;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	font-size: small;
+	color: var(--color-label);
+}
+
+input {
+	border: 1px solid var(--color-border);
+	border-radius: 0.25rem;
+	outline: none;
+	padding: 0.5rem;
+	margin: 1rem;
+	color: var(--color-text);
+}
+
+label input {
+	margin: 0.5rem 0 0 0;
+}
+
+#onboarding-form {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: #eaeef5;
+}
+#onboarding-form > .container {
+	display: flex;
+	width: 85%;
+	height: 85%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-background);
+	min-width: 300px;
+	padding: 1rem;
+}
+
+#onboarding-form .logoContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#onboarding-form .titleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+#onboarding-form .title {
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+}
+
+#onboarding-form .subTitle {
+	color: var(--color-light-text);
+	text-align: center;
+}
+
+#onboarding-form .completedImg {
+	height: 3rem;
+	width: 3rem;
+	margin: 1rem 0;
+	align-self: center;
+}
+
+#onboarding-form #multi-step-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	max-width: 400px;
+}
+
+#multi-step-form .select {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+	justify-content: space-between;
+	border: 2px solid var(--color-border);
+	border-radius: 1rem;
+}
+
+#multi-step-form .select.checked {
+	border-color: var(--color-primary);
+}
+
+#multi-step-form .select > .subTitle {
+	color: var(--color-light-text);
+	text-align: start;
+	margin-top: 0.5rem;
+	font-size: small;
+}
+
+#multi-step-form .select > img {
+	width: 2.5rem;
+	height: 2.5rem;
 }
