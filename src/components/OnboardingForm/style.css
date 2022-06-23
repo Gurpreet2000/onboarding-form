@@ -1,0 +1,152 @@
+#onboarding-form {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: #eaeef5;
+}
+#onboarding-form > .container {
+	display: flex;
+	width: 85%;
+	height: 85%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-background);
+	min-width: 300px;
+	padding: 1rem;
+}
+
+#onboarding-form .logoContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#onboarding-form .titleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+#onboarding-form .title {
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+}
+
+#onboarding-form .subTitle {
+	color: var(--color-light-text);
+	text-align: center;
+}
+
+#onboarding-form .completedImg {
+	height: 3rem;
+	width: 3rem;
+	margin: 1rem 0;
+	align-self: center;
+}
+
+#onboarding-form #multi-step-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	max-width: 400px;
+}
+#onboarding-form #multi-step-progress-bar {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	max-width: 400px;
+	margin: 2rem 0;
+}
+
+#multi-step-form .select {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+	justify-content: space-between;
+	border: 1px solid var(--color-border);
+	border-radius: 0.5rem;
+}
+
+#multi-step-form .select.checked {
+	border-color: var(--color-primary);
+}
+
+#multi-step-form .select > .subTitle {
+	color: var(--color-light-text);
+	text-align: start;
+	margin-top: 0.5rem;
+	font-size: small;
+}
+
+#multi-step-form .select > img {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+#multi-step-progress-bar .progress-bar {
+	position: absolute;
+	width: 100%;
+	border: 1px solid var(--color-primary);
+	z-index: 0;
+	box-sizing: border-box;
+}
+
+#multi-step-progress-bar .steps-container {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	z-index: 2;
+	box-sizing: border-box;
+}
+
+#multi-step-progress-bar .steps-container > .after,
+#multi-step-progress-bar .steps-container > .before {
+	content: '';
+	width: 12.5%;
+	height: 25px;
+	position: absolute;
+	align-self: center;
+	background-color: var(--color-background);
+	z-index: -1;
+}
+
+#multi-step-progress-bar .steps-container > .before {
+	left: 0%;
+}
+
+#multi-step-progress-bar .steps-container > .after {
+	right: 0%;
+}
+
+#multi-step-progress-bar .steps-container .step {
+	color: black;
+	height: 25px;
+	width: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1rem;
+	border-radius: 100%;
+	vertical-align: middle;
+	background-color: var(--color-background);
+}
+
+#multi-step-progress-bar .steps-container .step.filled {
+	color: white;
+	background-color: var(--color-primary);
+}

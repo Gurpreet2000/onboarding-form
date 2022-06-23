@@ -101,7 +101,7 @@ const OnboardingForm = () => {
 					<img src={eden_logo} />
 					<span>Eden</span>
 				</div>
-				<MultiStepProgressBar />
+				<MultiStepProgressBar step={currentStep} stepCount={STEP_COUNT} />
 
 				<div className="titleContainer">
 					{currentStep === STEP_COUNT - 1 && <img src={completed_check} className="completedImg" />}

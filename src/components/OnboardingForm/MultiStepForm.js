@@ -4,7 +4,11 @@ const MultiStepForm = ({ onSubmit, inputs = [], buttonTitle, type }) => {
 	const renderSelect = () => (
 		<div style={{ display: 'flex' }}>
 			{inputs.map((item, i) => (
-				<div className={`select ${item?.checked ? 'checked' : ''}`} onClick={item?.setValue}>
+				<div
+					key={i}
+					className={`select ${item?.checked ? 'checked' : ''}`}
+					onClick={item?.setValue}
+				>
 					<img src={item?.icon} />
 					<span>{item?.title}</span>
 					<span className="subTitle">{item?.subTitle}</span>
